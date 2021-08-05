@@ -5,8 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tic-Tac-Toe</title>
+    
+    <link rel="stylesheet" href="ttt.css">
+    <script src="ttt.js" defer></script>
 </head>
+
 <body>
-    <h1>Tic-Tac-Toe</h1>
+    <!-- creating class and id so that I can access class for css and id for js -->
+    <div class="board x" id="board">
+        <!-- used .cell*9 to create 9 divs -->
+        <div class="cell x" data-cell></div>
+        <div class="cell o" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+    </div>
+    <div class="win-msg" id="winMsg">
+        <div data-win-msg-text></div>
+        <button id="restartBtn">Restart</button>
+    </div>
 </body>
 </html>
+
+    <!-- EXTENSIONS -->
+<!-- Rules page/section -->
+<!-- Computer difficulty in Single Player selector -->
+<!-- Ability to input Player names -->
+<!-- Track player scores -->
