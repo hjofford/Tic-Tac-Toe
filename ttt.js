@@ -1,3 +1,4 @@
+// Set variables
 const xClass = 'x'
 const oClass = 'o'
 const winCombo = [
@@ -15,10 +16,13 @@ const board = document.getElementById('board')
 const winMsgEl = document.getElementById('winMsg')
 const restartBtn = document.getElementById('restartBtn')
 const winMsgTextEl = document.querySelector('[data-win-msg-text]')
+
+// define a player variable to use boolean values in functions to define player turn
 let oTurn
 
 startGame()
 
+// link Restart to startGame function
 restartBtn.addEventListener('click', startGame)
 
 function startGame() {
@@ -47,6 +51,7 @@ function handleClick(e) {
   }
 }
 
+// Win/Draw message
 function endGame(draw) {
   if (draw) {
     winMsgTextEl.innerText = 'Draw!'
@@ -56,6 +61,8 @@ function endGame(draw) {
   winMsgEl.classList.add('show')
 }
 
+
+// functions to call in main code
 function isDraw() {
   return [...cellEl].every(cell => {
     return cell.classList.contains(xClass) || cell.classList.contains(oClass)
@@ -81,7 +88,9 @@ function setBoardHoverClass() {
 }
 
 function checkWin(currentClass) {
+    // .some determines whether the specified callback => returs 'true' boolean for any element in the array
   return winCombo.some(combination => {
+      // .every determines whether all members of an array satisfy the test (above)
     return combination.every(index => {
       return cellEl[index].classList.contains(currentClass)
     })

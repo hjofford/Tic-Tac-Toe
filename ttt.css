@@ -195,9 +195,4 @@ main {
     display: flex;
 }
 
-.rP {
-    display: flex;
-    max-height: 50px;
-    max-width: 50px;
-}
 /* css filter to make transparent - google. attach on hover eventlistener, if p1 on hover, append class to cell, render x/o, when leaves  */
