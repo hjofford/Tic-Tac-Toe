@@ -4,30 +4,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tic-Tac-Toe</title>
-    
     <link rel="stylesheet" href="ttt.css">
-    <script src="ttt.js" defer></script>
+        
+    <title>Tic-Tac-Toe</title>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');</style>
+    
 </head>
 
 <body>
+    <header>
+        <h1>Tic-Tac-Toe</h1>
+
+    </header>
+
     <!-- creating class and id so that I can access class for css and id for js -->
-    <div class="board x" id="board">
-        <!-- used .cell*9 to create 9 divs -->
-        <div class="cell x" data-cell></div>
-        <div class="cell o" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-    </div>
-    <div class="win-msg" id="winMsg">
-        <div data-win-msg-text></div>
-        <button id="restartBtn">Restart</button>
-    </div>
+    <main> 
+        <div class="board" id="board">
+            <!-- used .cell*9 to create 9 divs -->
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+        </div>
+        <div class="win-msg" id="winMsg">
+            <div data-win-msg-text></div>
+            <button id="restartBtn">Restart</button>
+        </div>
+    </main>
+    
+    <script src="ttt.js"></script>
 </body>
 </html>
 
