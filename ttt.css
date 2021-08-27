@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
 /* Everything selector *, *::after/before */
 *, *::after, *::before {
     box-sizing: border-box;
@@ -9,39 +10,83 @@
     --mark-size: calc(var(--cell-size) * .9);
 }
 
-header {
+h1 {
     font-family: 'Nunito', 'san-serif';
-    font-size: 40px;
+    font-size: 50px;
     color: white;
-    display: flex;
-    justify-content: center;
-    margin: 0 auto;
-    padding: 0px;
-           
+    text-align: center;
+    margin: 0px;
 }
 
-h1 {
-    margin-top: 50px;
-    margin-bottom: 0;
-    padding: 0px;
+h3 {
+    font-family: 'Nunito', 'san-serif';
+    font-size: 30px;
+    color: white;
+    text-align: center;
+    margin: 0px;
+}
+
+h4 {
+    font-family: 'Nunito', 'san-serif';
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 0px;
 }
 
 body {
+    
     background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/757046db-0514-4b01-92ff-46b63e5c0361/dehm2qo-0494382f-3351-455a-8917-30376d0a9895.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzc1NzA0NmRiLTA1MTQtNGIwMS05MmZmLTQ2YjYzZTVjMDM2MVwvZGVobTJxby0wNDk0MzgyZi0zMzUxLTQ1NWEtODkxNy0zMDM3NmQwYTk4OTUucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.0PfQrKr8dAPv20m-0ns_nlGzQhTyDt7ap10gXL260Ww"); 
-    background-color: rgb(196, 53, 51);
-    background-size: cover;
-    overflow: auto;
-    margin: 0 auto;
+    background-color: rgb(233, 32, 62);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: 100% 100%;
 }
 
-main {
-    margin-top: 0;
+/* Styling for 'scoreboard' div using grid-template */
+.scoreboard {
+    font-family: 'Nunito', 'san-serif';
+    color: white;
+    margin-bottom: 10px;
+    justify-content: center;
+    display: grid;
+    grid-template-areas:
+    "p1 p2"
+    "scoreX scoreO";
+    grid-template-rows: 25px 25px;
+    grid-template-columns: 95px 95px;
+    text-align: center;
+    
 }
 
+#playerX {
+    grid-area: p1;
+    margin-bottom: 0px;
+}
+
+#player0 {
+    grid-area: p2;
+    margin-bottom: 0px;
+}
+
+#xScore {
+    grid-area: scoreX;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+#oScore {
+    grid-area: scoreX;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+/* Board */
 .board {
-    width: 100vw;
-    height: 100vh;
-    margin: 0px;
+    width: 100%;
+    margin-top: 20px;
     padding: 0px;
     display: grid;
     justify-content: center;
@@ -51,10 +96,11 @@ main {
     grid-template-columns: repeat(3, auto);
 }
 
+/* Each cell within the board */
 .cell {
     width: var(--cell-size);
     height: var(--cell-size);
-    border: 1px solid black;
+    border: 1px solid white;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -161,6 +207,49 @@ main {
     background-color: transparent;
 }
 
+/* Start game message */
+.start-msg {
+    z-index: 1;
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url('https://www.pride.com/sites/default/files/2019/08/11/rupauls-drag-race-rupauls-best-looks-outfits.jpg');
+    background-color: rgb(163, 83, 126, 75%);
+    background-size: 750px 422px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 2px 2px black;
+    font-family: 'Nunito';
+    font-size: 3rem;
+    flex-direction: column;
+}
+
+.start-msg button {
+    font-family: 'Nunito';
+    font-size: 3rem;
+    background-color: white;
+    border: 1px solid black;
+    padding: .25em .5em;
+    cursor: pointer;
+}
+
+.start-msg button:hover {
+    background-color: indigo;
+    color: white;
+    border-color: white;
+}
+
+.start-msg.show {
+    display: flex;
+}
+
 /* Game over/Winner message */
 .win-msg {
     display: none;
@@ -169,15 +258,23 @@ main {
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: rgba(20, 172, 6, 0.9);
+    background-image: url('https://crushingkrisis.com/assets/RPDRS0912-RuPaul-Win.jpeg');
+    background-color: rgb(163, 83, 126, 75%);
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
     justify-content: center;
     align-items: center;
     color: white;
-    font-size: 5rem;
+    text-shadow: 2px 2px black;
+    font-family: 'Nunito';
+    font-size: 3rem;
     flex-direction: column;
 }
 
 .win-msg button {
+    font-family: 'Nunito';
     font-size: 3rem;
     background-color: white;
     border: 1px solid black;
@@ -195,4 +292,6 @@ main {
     display: flex;
 }
 
-/* css filter to make transparent - google. attach on hover eventlistener, if p1 on hover, append class to cell, render x/o, when leaves  */
+
+
+/* Yang - css filter to make transparent - google. attach on hover eventlistener, if p1 on hover, append class to cell, render x/o, when leaves  */

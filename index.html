@@ -7,18 +7,29 @@
     <link rel="stylesheet" href="ttt.css">
         
     <title>Tic-Tac-Toe</title>
-    <style>@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');</style>
+    
     
 </head>
 
 <body>
     <header>
-        <h1>Tic-Tac-Toe</h1>
-
+        <h1>Rupaul's</h1>
+        <h3>Tic-Tac-Toe</h3>
     </header>
 
     <!-- creating class and id so that I can access class for css and id for js -->
-    <main> 
+    <main>
+        <div class="start-msg" id="startMsg">
+            <h5>Good luck and don't fuck it up!</h5>
+            <button id="startBtn">Start Game!</button>
+        </div> -->
+        <h4>Scoreboard</h4>
+        <div class="scoreboard">
+            <p id="playerX">Player X</p>
+            <p id="playerO">Player O</p>
+            <p><span id="xScore">0</span></p>
+            <p><span id="oScore">0</span></p>
+        </div>
         <div class="board" id="board">
             <!-- used .cell*9 to create 9 divs -->
             <div class="cell" data-cell></div>
@@ -31,6 +42,7 @@
             <div class="cell" data-cell></div>
             <div class="cell" data-cell></div>
         </div>
+        
         <div class="win-msg" id="winMsg">
             <div data-win-msg-text></div>
             <button id="restartBtn">Restart</button>
