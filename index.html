@@ -8,7 +8,6 @@
         
     <title>Tic-Tac-Toe</title>
     
-    
 </head>
 
 <body>
@@ -21,8 +20,8 @@
     <main>
         <div class="start-msg" id="startMsg">
             <h5>Good luck and don't fuck it up!</h5>
-            <button id="startBtn">Start Game!</button>
-        </div> -->
+            <button id="twoPlayerBtn">1 vs 1</button><button id="computerBtn">Vs Comp</button>
+        </div>
         <h4>Scoreboard</h4>
         <div class="scoreboard">
             <p id="playerX">Player X</p>
@@ -32,20 +31,41 @@
         </div>
         <div class="board" id="board">
             <!-- used .cell*9 to create 9 divs -->
-            <div class="cell" data-cell></div>
-            <div class="cell" data-cell></div>
-            <div class="cell" data-cell></div>
-            <div class="cell" data-cell></div>
-            <div class="cell" data-cell></div>
-            <div class="cell" data-cell></div>
-            <div class="cell" data-cell></div>
-            <div class="cell" data-cell></div>
-            <div class="cell" data-cell></div>
+            <div class="cell" data-cell=0></div>
+            <div class="cell" data-cell=1></div>
+            <div class="cell" data-cell=2></div>
+            <div class="cell" data-cell=3></div>
+            <div class="cell" data-cell=4></div>
+            <div class="cell" data-cell=5></div>
+            <div class="cell" data-cell=6></div>
+            <div class="cell" data-cell=7></div>
+            <div class="cell" data-cell=8></div>
         </div>
         
         <div class="win-msg" id="winMsg">
             <div data-win-msg-text></div>
             <button id="restartBtn">Restart</button>
+        </div>
+        <div class="draw-msg" id="drawMsg">
+            <div data-draw-msg-text></div>
+            <button id="drawRestartBtn">Try Again</button>
+        </div>
+        <div class="dbl-pts-msg" id="dblPtsMsg">
+            <div data-dbl-pts-msg-text></div>
+            <button id="dblPtsRestartBtn">Restart</button>
+        </div>
+
+        <div class="comp-win-msg" id="compWinMsg">
+            <div data-comp-win-msg-text></div>
+            <button id="compRestartBtn">Restart</button>
+        </div>
+        <div class="comp-draw-msg" id="compDrawMsg">
+            <div data-comp-draw-msg-text></div>
+            <button id="compDrawRestartBtn">Try Again</button>
+        </div>
+        <div class="comp-dbl-pts-msg" id="compDblPtsMsg">
+            <div data-comp-dbl-pts-msg-text></div>
+            <button id="compDblPtsRestartBtn">Restart</button>
         </div>
     </main>
     

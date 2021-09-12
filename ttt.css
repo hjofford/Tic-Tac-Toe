@@ -143,11 +143,11 @@ body {
 /* empty cell selector for current player - transparent, before click */
 .cell.x::before,
 .cell.x::after {
-    background-color: black;
+    background-color: white;
 }
 
 .cell.o::before {
-    border: 15px solid black;
+    border: 15px solid white;
     background-color: transparent;
 }
 
@@ -226,13 +226,13 @@ body {
     align-items: center;
     color: white;
     text-shadow: 2px 2px black;
-    font-family: 'Nunito';
+    font-family: 'Nunito', 'San-serif';
     font-size: 3rem;
     flex-direction: column;
 }
 
 .start-msg button {
-    font-family: 'Nunito';
+    font-family: 'Nunito', 'San-serif';
     font-size: 3rem;
     background-color: white;
     border: 1px solid black;
@@ -250,7 +250,7 @@ body {
     display: flex;
 }
 
-/* Game over/Winner message */
+/* Winner message */
 .win-msg {
     display: none;
     position: fixed;
@@ -268,13 +268,13 @@ body {
     align-items: center;
     color: white;
     text-shadow: 2px 2px black;
-    font-family: 'Nunito';
+    font-family: 'Nunito', 'San-serif';
     font-size: 3rem;
     flex-direction: column;
 }
 
 .win-msg button {
-    font-family: 'Nunito';
+    font-family: 'Nunito', 'San-serif';
     font-size: 3rem;
     background-color: white;
     border: 1px solid black;
@@ -292,6 +292,218 @@ body {
     display: flex;
 }
 
+/* Draw message */
+.draw-msg {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url('https://tv-fanatic-res.cloudinary.com/iu/s--jDjYNA0n--/f_auto,q_auto/v1625162730/shocked-rupaul-wide-rupauls-drag-race-all-stars-s6e3');
+    background-color: rgb(163, 83, 126, 75%);
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 2px 2px black;
+    font-family: 'Nunito', 'San-serif';
+    font-size: 3rem;
+    flex-direction: column;
+}
 
+.draw-msg button {
+    font-family: 'Nunito', 'San-serif';
+    font-size: 3rem;
+    background-color: white;
+    border: 1px solid black;
+    padding: .25em .5em;
+    cursor: pointer;
+}
+
+.draw-msg button:hover {
+    background-color: indigo;
+    color: white;
+    border-color: white;
+}
+
+.draw-msg.show {
+    display: flex;
+}
+
+
+/* Double points message */
+.dbl-pts-msg {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url('https://gcn.ie/wp-content/uploads/2019/05/shocking-moments-drag-race-herstory.jpg');
+    background-color: rgb(163, 83, 126, 75%);
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 2px 2px black;
+    font-family: 'Nunito', 'San-serif';
+    font-size: 3rem;
+    flex-direction: column;
+}
+
+.dbl-pts-msg button {
+    font-family: 'Nunito', 'San-serif';
+    font-size: 3rem;
+    background-color: white;
+    border: 1px solid black;
+    padding: .25em .5em;
+    cursor: pointer;
+}
+
+.dbl-pts-msg button:hover {
+    background-color: indigo;
+    color: white;
+    border-color: white;
+}
+
+.dbl-pts-msg.show {
+    display: flex;
+}
+
+
+
+/* Computer Winner message */
+.comp-win-msg {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url('https://crushingkrisis.com/assets/RPDRS0912-RuPaul-Win.jpeg');
+    background-color: rgb(163, 83, 126, 75%);
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 2px 2px black;
+    font-family: 'Nunito', 'San-serif';
+    font-size: 3rem;
+    flex-direction: column;
+}
+
+.comp-win-msg button {
+    font-family: 'Nunito', 'San-serif';
+    font-size: 3rem;
+    background-color: white;
+    border: 1px solid black;
+    padding: .25em .5em;
+    cursor: pointer;
+}
+
+.comp-win-msg button:hover {
+    background-color: indigo;
+    color: white;
+    border-color: white;
+}
+
+.comp-win-msg.show {
+    display: flex;
+}
+
+/* Computer Draw message */
+.comp-draw-msg {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url('https://tv-fanatic-res.cloudinary.com/iu/s--jDjYNA0n--/f_auto,q_auto/v1625162730/shocked-rupaul-wide-rupauls-drag-race-all-stars-s6e3');
+    background-color: rgb(163, 83, 126, 75%);
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 2px 2px black;
+    font-family: 'Nunito', 'San-serif';
+    font-size: 3rem;
+    flex-direction: column;
+}
+
+.comp-draw-msg button {
+    font-family: 'Nunito', 'San-serif';
+    font-size: 3rem;
+    background-color: white;
+    border: 1px solid black;
+    padding: .25em .5em;
+    cursor: pointer;
+}
+
+.comp-draw-msg button:hover {
+    background-color: indigo;
+    color: white;
+    border-color: white;
+}
+
+.comp-draw-msg.show {
+    display: flex;
+}
+
+
+/* Computer Double points message */
+.comp-dbl-pts-msg {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url('https://gcn.ie/wp-content/uploads/2019/05/shocking-moments-drag-race-herstory.jpg');
+    background-color: rgb(163, 83, 126, 75%);
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 2px 2px black;
+    font-family: 'Nunito', 'San-serif';
+    font-size: 3rem;
+    flex-direction: column;
+}
+
+.comp-dbl-pts-msg button {
+    font-family: 'Nunito', 'San-serif';
+    font-size: 3rem;
+    background-color: white;
+    border: 1px solid black;
+    padding: .25em .5em;
+    cursor: pointer;
+}
+
+.comp-dbl-pts-msg button:hover {
+    background-color: indigo;
+    color: white;
+    border-color: white;
+}
+
+.comp-dbl-pts-msg.show {
+    display: flex;
+}
 
 /* Yang - css filter to make transparent - google. attach on hover eventlistener, if p1 on hover, append class to cell, render x/o, when leaves  */
