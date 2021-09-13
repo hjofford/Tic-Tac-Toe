@@ -26,6 +26,7 @@ const startMsgEl = document.getElementById('startMsg')
 const twoPlayerBtn = document.getElementById('twoPlayerBtn')
 const computerBtn = document.getElementById('computerBtn')
 
+const reset = document.getElementById('reset')
 
 const winMsgEl = window.document.getElementById('winMsg')
 const restartBtn = document.getElementById('restartBtn')
@@ -48,9 +49,9 @@ const compDbPtsMsgEl = window.document.getElementById('compDblPtsMsg')
 const compDblPtsRestartBtn = document.getElementById('compDblPtsRestartBtn')
 const compDblPtsMsgTextEl = document.querySelector('[data-comp-dbl-pts-msg-text]')
 
-const compDrawMsgEl = window.document.getElementById('drawMsg')
-const compDrawRestartBtn = document.getElementById('drawRestartBtn')
-const compDrawMsgTextEl = document.querySelector('[data-draw-msg-text]')
+const compDrawMsgEl = window.document.getElementById('compDrawMsg')
+const compDrawRestartBtn = document.getElementById('compDrawRestartBtn')
+const compDrawMsgTextEl = document.querySelector('[data-comp-draw-msg-text]')
 
 
 const xScoreResult = document.getElementById('xScore')
@@ -60,7 +61,8 @@ const oScoreResult = document.getElementById('oScore')
 let xTurn
 let oTurn
 let compTurn
-
+let gameActive = true
+let compBoard = ["", "", "", "", "", "", "", "", ""]
 // ------------------------------------------ //
 
 // Start game mesage popup on first page load
@@ -94,6 +96,8 @@ drawRestartBtn.addEventListener('click', twoPlayerGame)
 compRestartBtn.addEventListener('click', compGame)
 compDrawRestartBtn.addEventListener('click', compGame)
 compDblPtsRestartBtn.addEventListener('click', compGame)
+
+reset.addEventListener('click', reload())
 
 // Start game function
 function twoPlayerGame() {
@@ -163,6 +167,7 @@ function compPlayer(event) {
         swapTurnsComp()
         
     };
+    isBoardFull()
     compChoice()
     if (checkDiagComp(currentClass)) {
       doublePointsGameCompPlayer()
@@ -317,6 +322,11 @@ function compChoice(currentClass) {
       break;
     }  
   }
+}
+function isBoardFull() {
+  if (Object.values(cellEl).filter(cell => {
+    cell.classList.contains('x') || cell.classList.contains('x')}))
+    return
 }
 
 function swapTurns() {

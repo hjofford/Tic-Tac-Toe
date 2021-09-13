@@ -35,6 +35,21 @@ h4 {
     margin-bottom: 0px;
 }
 
+#reset {
+    margin: auto;
+    width: 10%;
+    border: 3px solid purple;
+    background-color: purple;
+    font-family: 'Nunito', 'San-serif';
+    text-align: center;
+    color: white
+}
+
+a, a:hover, a:focus, a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
 body {
     
     background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/757046db-0514-4b01-92ff-46b63e5c0361/dehm2qo-0494382f-3351-455a-8917-30376d0a9895.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzc1NzA0NmRiLTA1MTQtNGIwMS05MmZmLTQ2YjYzZTVjMDM2MVwvZGVobTJxby0wNDk0MzgyZi0zMzUxLTQ1NWEtODkxNy0zMDM3NmQwYTk4OTUucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.0PfQrKr8dAPv20m-0ns_nlGzQhTyDt7ap10gXL260Ww"); 
